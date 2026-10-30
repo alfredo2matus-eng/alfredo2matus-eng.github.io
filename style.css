@@ -1,0 +1,248 @@
+/* 1. Basic style for the whole page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fb;
+    color: #243047;
+}
+
+/* 2. Style the top header */
+header {
+    background-color: #183b56;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin-bottom: 0;
+    color: #d9e7f0;
+}
+
+/* 3. Control the width of the main content */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* 4. Style the month selector */
+.month-section {
+    margin-bottom: 24px;
+}
+
+/* 5. Style labels and input fields */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* 6. Arrange the summary cards */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* 7. Style the cards */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.summary .card {
+    margin-bottom: 0;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 19px;
+}
+
+.summary .card p {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #18794e;
+}
+
+/* 8. Style the transaction form */
+form label {
+    margin-top: 16px;
+}
+
+form input, form select {
+    margin-bottom: 4px;
+}
+
+/* 9. Style buttons */
+button {
+    margin-top: 18px;
+    padding: 12px 18px;
+    background-color: #18794e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #125c3b;
+}
+
+/* 10. Style the transaction list */
+#transaction-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#transaction-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* 11. Make the app fit smaller screens */
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+
+/* ===================================
+   TRANSACTION LIST DESIGN
+=================================== */
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.transaction-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+}
+
+.transaction-item:hover {
+    background-color: #f8fafc;
+}
+
+.transaction-description {
+    font-weight: bold;
+    color: #243047;
+    overflow-wrap: anywhere;
+}
+
+.transaction-details {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.transaction-type {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.transaction-type.income {
+    background-color: #dcfce7;
+    color: #18794e;
+}
+
+.transaction-type.expense {
+    background-color: #fee2e2;
+    color: #c0392b;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.transaction-amount.income {
+    color: #18794e;
+}
+
+.transaction-amount.expense {
+    color: #c0392b;
+}
+
+.delete-button {
+    margin: 0;
+    padding: 7px 12px;
+    background-color: #fff1f0;
+    color: #c0392b;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.delete-button:hover {
+    background-color: #fee2e2;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .transaction-item {
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+    }
+
+    .transaction-details {
+        grid-column: 1;
+        grid-row: 2;
+        flex-wrap: wrap;
+    }
+
+    .delete-button {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+}

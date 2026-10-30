@@ -1,0 +1,25 @@
+{
+  "id": "/my-budget-tracker/",
+  "name": "My Budget Tracker",
+  "short_name": "My Budget",
+  "description": "Track your income and expenses.",
+  "start_url": "/my-budget-tracker/",
+  "scope": "/my-budget-tracker/",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#183b56",
+  "icons": [
+    {
+      "src": "/my-budget-tracker/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/my-budget-tracker/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
