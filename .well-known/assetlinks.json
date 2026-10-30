@@ -1,1 +1,13 @@
 
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.alfredo2matus_eng.twa",
+      "sha256_cert_fingerprints": [
+        "8F:6A:7B:F3:84:82:2B:E8:81:B2:3D:BB:F7:A6:B3:27:31:51:6D:AA:31:11:E7:8B:FC:AE:2C:FE:77:04:4E:93"
+      ]
+    }
+  }
+]
